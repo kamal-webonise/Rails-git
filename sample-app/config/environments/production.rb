@@ -1,3 +1,5 @@
+require 'mail'
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -99,6 +101,10 @@ Rails.application.configure do
   ActionMailer::Base.smtp_settings = {
     :address        => 'smtp.gmail.com',
     :port           => '587',
+    :domain         => 'gmail.com',
+    :user_name      => 'kamalmehra79531@gmail.com',
+    :password       => 'singh13597',
+    :authentication => 'plain',
     :enable_starttls_auto => true
   }
 end
